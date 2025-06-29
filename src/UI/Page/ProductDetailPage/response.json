@@ -1,0 +1,8 @@
+{
+  "pid": 1,
+  "name": "F-35B fighter jet",
+  "description": "The F-35 is a stealth, multirole combat jet with advanced sensors, superior agility, and integrated avionics. It supports air-to-air, air-to-ground missions, has a top speed of Mach 1.6, and operates from various platforms including aircraft carriers.",
+  "imageUrl": "https://i0.wp.com/www.flyajetfighter.com/wp-content/uploads/2024/09/F-35.jpg?resize=1200%2C675&ssl=1",
+  "price": 109000000,
+  "stock": 48
+}

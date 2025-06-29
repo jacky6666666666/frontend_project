@@ -1,7 +1,23 @@
 import {Table} from "react-bootstrap";
 import ResultTableRow from "./ResultTableRow.tsx";
+import type {GetAllProductDto} from "../../../../data/product/type.ts";
+import {useEffect, useState} from "react";
+import mockData from "../response.json";
 
-export default function ResultTable(){
+type Props = {
+  getAllProductDto: GetAllProductDto
+  weaponType: string
+}
+
+
+export default function ResultTable({getAllProductDto}: Props){
+  const [getAllProductDtoList, setGetAllProductDtoList] = useState<GetAllProductDto[]>(mockData);
+
+  useEffect(() => {
+
+  }, []);
+
+
   return(
     <Table striped bordered hover>
       <thead>
@@ -9,13 +25,21 @@ export default function ResultTable(){
         <th>Pid</th>
         <th>Image</th>
         <th>Name</th>
-        <th>HasStork</th>
-        <th>Price</th>
+        <th>hasStock</th>
+        <th>price</th>
 
       </tr>
       </thead>
       <tbody>
-      <ResultTableRow/>
+
+        {/*
+        .filter((result)=> (
+          result.weaponType.includes(weaponType)
+        )) */}
+        {
+        getAllProductDtoList.map( (dto) => (
+      <ResultTableRow getAllProductDto={dto}/> ))
+      }
       </tbody>
     </Table>
 
