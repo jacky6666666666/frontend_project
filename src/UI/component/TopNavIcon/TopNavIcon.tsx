@@ -5,7 +5,7 @@ export default function TopNavIcon(){
     <>
       <Navbar className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <img
               alt=""
               src="https://img.freepik.com/premium-photo/fierce-fighter-jet-action-stunning-photo-military-aircraft-flying-city_734790-1157.jpg"

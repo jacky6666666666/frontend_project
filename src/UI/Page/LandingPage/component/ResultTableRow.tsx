@@ -1,5 +1,6 @@
 import type {GetAllProductDto} from "../../../../data/product/type.ts";
 import {Button} from "react-bootstrap";
+import {Link} from "@tanstack/react-router";
 
 
 type Props = {
@@ -54,7 +55,13 @@ export default function ResultTableRow({getAllProductDto}: Props){
         {getAllProductDto.price}
       </td>
       <td>
+        <Link
+        to="/product/$productId"
+        params={{productId: getAllProductDto.pid.toString(),}}
+
+        >
         <Button variant="info">Check it out !</Button>
+        </Link>
       </td>
     </tr>
 
