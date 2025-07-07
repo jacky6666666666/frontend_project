@@ -82,6 +82,8 @@ export default function ProductDetailContainer(){
     return <LoadingContainer/>
   }
 
+
+
   return(
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src ={getProductDetailDto.imageUrl}/>

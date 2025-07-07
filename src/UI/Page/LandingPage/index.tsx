@@ -14,7 +14,7 @@ import {getAllProduct} from "../../../UI/api/ProductApi.ts";
 export default function LandingPage(){
 
 
-  const[getAllProductDto, setGetAllProductDto] = useState<GetAllProductDto[] | undefined>(undefined);
+  const[getAllProductDto, setGetAllProductDto] = useState<GetAllProductDto | undefined>(undefined);
 
 
 

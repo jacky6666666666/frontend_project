@@ -62,14 +62,14 @@ export default function LoginPage(){
 
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="name@example.com" />
+        <Form.Control type="email" name="email" placeholder="name@example.com" />
       </Form.Group>
 
     <Form.Group>
       <Form.Label >Password</Form.Label>
       <Form.Control
         type="password"
-
+        name="password"
         aria-describedby="passwordHelpBlock"
       />
     </Form.Group>

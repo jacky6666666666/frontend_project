@@ -9,12 +9,13 @@ import LoadingContainer from "../../../component/LoadingContainer";
 
 
 type Props = {
-  getAllProductDto: GetAllProductDto
-  weaponType: string
+  getAllProductDto: GetAllProductDto;
+  // GetAllProductDtoList: GetAllProductDto;
+  weaponType: string;
 }
 
 
-export default function ResultTable({getAllProductDto}: Props){
+export default function ResultTable(){
   const [getAllProductDtoList, setGetAllProductDtoList] = useState<GetAllProductDto[] | undefined>(undefined);
 
   const navigate = useNavigate({from:"/"})
@@ -22,6 +23,7 @@ export default function ResultTable({getAllProductDto}: Props){
   const getAllProduct1 = async () => {
     try {
       const responseData = await ProductApi.getAllProduct();
+      console.log(responseData)
       setGetAllProductDtoList(responseData);
 
     } catch {
@@ -32,9 +34,12 @@ export default function ResultTable({getAllProductDto}: Props){
 
   }
 
+
   useEffect(() => {
      getAllProduct1()
-  }, [] );
+  }, []);
+
+
 
 
   if(!getAllProductDtoList){
@@ -63,8 +68,10 @@ export default function ResultTable({getAllProductDto}: Props){
           result.weaponType.includes(weaponType)
         )) */}
         {
+
         getAllProductDtoList.map( (dto) => (
       <ResultTableRow getAllProductDto={dto}/> ))
+
       }
       </tbody>
     </Table>
